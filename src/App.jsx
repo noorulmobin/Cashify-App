@@ -17,6 +17,7 @@ import ArticleList from "./components/Articles2.jsx";
 import Review from "./components/Review.jsx";
 import DownloadAppBanner from "./components/Appbanner.jsx";
 import Para from "./components/Para.jsx";
+import Footer from "./components/Footer.jsx";
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
       <Review />
       <DownloadAppBanner />
       <Para />
+      <Footer/>
     </>
   );
 }
