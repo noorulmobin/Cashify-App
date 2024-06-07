@@ -6,3 +6,9 @@
 #ourservices {
   max-width: 1450;
 }
+#logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
