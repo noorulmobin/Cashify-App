@@ -1,7 +1,7 @@
 import "./App.css";
 import Cards from "./pages/Cards.jsx";
-import Header from "./pages/Header.jsx";
-import SwipeableTextMobileStepper from "./pages/Hero.jsx";
+import PrimarySearchAppBar from "./pages/Header.jsx";
+
 import CreditCardBanner from "./components/Banner.jsx";
 import Reviews from "./components/Brands.jsx";
 import DividerStack from "./components/Slider.jsx";
@@ -22,8 +22,7 @@ import Footer from "./components/Footer.jsx";
 function App() {
   return (
     <>
-      <Header />
-      <SwipeableTextMobileStepper />
+      <PrimarySearchAppBar />
       <Cards />
       <CreditCardBanner />
       <OutlinedCard />
@@ -40,7 +39,7 @@ function App() {
       <Review />
       <DownloadAppBanner />
       <Para />
-      <Footer/>
+      <Footer />
     </>
   );
 }

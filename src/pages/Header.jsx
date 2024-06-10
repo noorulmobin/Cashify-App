@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import { styled, alpha } from "@mui/material/styles";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -7,27 +7,24 @@ import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import InputBase from "@mui/material/InputBase";
 import Badge from "@mui/material/Badge";
-import MenuItem from "@mui/material/MenuItem";
-import Menu from "@mui/material/Menu";
-
+import MenuItem from "@mui/material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import MailIcon from "@mui/icons-material/Mail";
 import NotificationsIcon from "@mui/icons-material/Notifications";
-import { Button } from "@mui/material";
+import Button from "@mui/material/Button";
+import HeaderLogo from "../assets/headerlogo.png";
+import Menu from "@mui/material/Menu";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
   borderRadius: theme.shape.borderRadius,
-  backgroundColor: alpha(theme.palette.common.white, 0.15),
+  backgroundColor: alpha(theme.palette.common.black, 0.1),
   "&:hover": {
-    backgroundColor: alpha(theme.palette.common.white, 0.25),
+    backgroundColor: alpha(theme.palette.common.black, 0.15),
   },
-
-  marginLeft: "auto",
   width: "60%",
-  backgroundColor: "rgba(218, 218, 218,218)",
-  color: "Grey",
+  marginLeft: "auto",
 }));
 
 const SearchIconWrapper = styled("div")(({ theme }) => ({
@@ -41,10 +38,9 @@ const SearchIconWrapper = styled("div")(({ theme }) => ({
 }));
 
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
-  color: "inherit",
+  color: "dark grey",
   "& .MuiInputBase-input": {
     padding: theme.spacing(1, 1, 1, 0),
-    // vertical padding + font size from searchIcon
     paddingLeft: `calc(1em + ${theme.spacing(4)})`,
     transition: theme.transitions.create("width"),
     width: "100%",
@@ -54,7 +50,12 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-export default function PrimarySearchAppBar() {
+const Navbar = styled(AppBar)(({ theme }) => ({
+  backgroundColor: "white",
+  boxShadow: "none",
+}));
+
+const PrimarySearchAppBar = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
@@ -82,16 +83,10 @@ export default function PrimarySearchAppBar() {
   const renderMenu = (
     <Menu
       anchorEl={anchorEl}
-      anchorOrigin={{
-        vertical: "top",
-        horizontal: "right",
-      }}
+      anchorOrigin={{ vertical: "top", horizontal: "right" }}
       id={menuId}
       keepMounted
-      transformOrigin={{
-        vertical: "top",
-        horizontal: "right",
-      }}
+      transformOrigin={{ vertical: "top", horizontal: "right" }}
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
@@ -104,16 +99,10 @@ export default function PrimarySearchAppBar() {
   const renderMobileMenu = (
     <Menu
       anchorEl={mobileMoreAnchorEl}
-      anchorOrigin={{
-        vertical: "top",
-        horizontal: "right",
-      }}
+      anchorOrigin={{ vertical: "top", horizontal: "right" }}
       id={mobileMenuId}
       keepMounted
-      transformOrigin={{
-        vertical: "top",
-        horizontal: "right",
-      }}
+      transformOrigin={{ vertical: "top", horizontal: "right" }}
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
@@ -154,80 +143,72 @@ export default function PrimarySearchAppBar() {
 
   return (
     <>
+      <Box sx={{ borderBottom: "1px solid rgb(211, 211, 211)" }}>
+        <Navbar
+          position="static"
+          sx={{
+            maxWidth: 1450,
+            margin: "auto",
+          }}
+        >
+          <Toolbar>
+            <img src={HeaderLogo} alt="" id="Logo" />
+
+            <Search id="search">
+              <SearchIconWrapper sx={{ color: "grey" }}>
+                <SearchIcon id="searchIcon" />
+              </SearchIconWrapper>
+              <StyledInputBase
+                placeholder="Search for Mobiles"
+                inputProps={{ "aria-label": "search" }}
+                id="searchInput"
+              />
+            </Search>
+            <Button
+              variant="contained"
+              sx={{ marginLeft: "auto", backgroundColor: "rgb(66, 200, 183)" }}
+              id="loginButton"
+            >
+              Login
+            </Button>
+          </Toolbar>
+        </Navbar>
+      </Box>
       <AppBar
         position="static"
         sx={{
-          background: "white",
-          border: "none",
-          maxWidth: 1400,
-          margin: "auto",
-          display: "flex",
-          flexWrap: "wrap",
-          position: "static",
+          boxShadow: "none",
+          backgroundColor: "white",
+          borderBottom: "1px solid rgb(211, 211, 211)",
         }}
       >
-        <Toolbar>
-          <Typography
-            variant="h3"
-            noWrap
-            component="div"
-            sx={{ display: { xs: "none", sm: "block", color: "grey" } }}
-          >
-            Cashify
+        <Toolbar
+          sx={{
+            maxWidth: 1450,
+            margin: "auto",
+            gap: "111px",
+          }}
+        >
+          <Typography sx={{ color: "black" }}>All</Typography>
+          <Typography sx={{ marginLeft: "auto", color: "black" }}>
+            SellPhone
           </Typography>
-          <Search>
-            <SearchIconWrapper>
-              <SearchIcon />
-            </SearchIconWrapper>
-            <StyledInputBase
-              placeholder="Search…"
-              inputProps={{ "aria-label": "search" }}
-            />
-          </Search>
-          <Button
-            variant="contained"
-            sx={{ marginLeft: "auto", background: "grey" }}
-          >
-            Login
-          </Button>
-        </Toolbar>
-      </AppBar>
-      <AppBar
-        position="relative"
-        color="default"
-        sx={{
-          justifySelf: "center",
-          maxWidth: 1400,
-          margin: "auto",
-          border: "none",
-          padding: "3px",
-          display: "flex",
-          flexWrap: "wrap",
-        }}
-      >
-        <Toolbar>
-          <Typography variant="h6" sx={{ color: "black" }}>
-            All
+          <Typography sx={{ marginLeft: "auto", color: "black" }}>
+            SellGadgets
           </Typography>
-          <Typography variant="h6" sx={{ marginLeft: "auto", color: "black" }}>
-            Sell Phone
+          <Typography sx={{ marginLeft: "auto", color: "black" }}>
+            BuyPhone
           </Typography>
-          <Typography variant="h6" sx={{ marginLeft: "auto", color: "black" }}>
-            Sell Gadgets
+          <Typography sx={{ marginLeft: "auto", color: "black" }}>
+            FindNewGadget
           </Typography>
-          <Typography variant="h6" sx={{ marginLeft: "auto", color: "black" }}>
-            Buy Phone
+          <Typography sx={{ marginLeft: "auto", color: "black" }}>
+            BuyLaptop
           </Typography>
-          <Typography variant="h6" sx={{ marginLeft: "auto", color: "black" }}>
-            Find New Gadget
+          <Typography sx={{ marginLeft: "auto", color: "black" }}>
+            CashifyStore
           </Typography>
-          <Typography variant="h6" sx={{ marginLeft: "auto", color: "black" }}>
-            Buy Laptop
-          </Typography>
-          <Typography variant="h6" sx={{ marginLeft: "auto", color: "black" }}>
-            Cashify Store
-          </Typography>
-          <Typography variant="h6" sx={{ marginLeft: "auto", color: "black" }}>
+          <Typography sx={{ marginLeft: "auto", color: "black" }}>
             More
           </Typography>
         </Toolbar>
@@ -236,4 +217,5 @@ export default function PrimarySearchAppBar() {
       {renderMenu}
     </>
   );
-}
+};
+export default PrimarySearchAppBar;

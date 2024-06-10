@@ -5,7 +5,7 @@ import myLocalImage63 from "../assets/insta.jpg";
 import myLocalImage64 from "../assets/twiter.jpg";
 import myLocalImage65 from "../assets/youtube.jpg";
 import myLocalImage66 from "../assets/linkdin.jpg";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo1.png";
 import safeguardImage from "../assets/safeguard.jpg";
 const Footer = () => {
   return (

@@ -3,14 +3,14 @@ import Divider from "@mui/material/Divider";
 import Paper from "@mui/material/Paper";
 import Stack from "@mui/material/Stack";
 import { styled, keyframes } from "@mui/material/styles";
-import myLocalImage30 from "../assets/apple.png";
+import myLocalImage30 from "../assets/apple1.png";
 import myLocalImage31 from "../assets/Nokia.png";
-import myLocalImage32 from "../assets/realme.png";
-import myLocalImage33 from "../assets/vivo.png";
-import myLocalImage34 from "../assets/paytm.png";
+import myLocalImage32 from "../assets/realme1.png";
+import myLocalImage33 from "../assets/vivo1.png";
+import myLocalImage34 from "../assets/paytm1.png";
 
 const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
+  backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#e5e7eb",
   ...theme.typography.body2,
   padding: theme.spacing(1),
   textAlign: "center",
