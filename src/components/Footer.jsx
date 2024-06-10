@@ -214,6 +214,7 @@ const Footer = () => {
             </ul>
           </Grid>
         </Grid>
+        <hr />
         <Box mt={6}>
           <Typography
             variant="h6"
@@ -223,12 +224,17 @@ const Footer = () => {
           >
             Registered Office:
           </Typography>
-          <Typography variant="body1" color="textSecondary">
+          <Typography variant="body1" color="textSecondary" marginTop="8px">
             Manak Waste Management Pvt Ltd., B-39, 1st Floor, Middle Circle,
             Connaught Place, New Delhi-110001, India, Support-7290068900 | CIN:
             U27205DL2009PTC190441 "
           </Typography>
-          <Typography variant="body1" color="textSecondary" align="left">
+          <Typography
+            variant="body1"
+            color="textSecondary"
+            align="left"
+            marginTop="8px"
+          >
             Manak Waste Management Pvt Ltd. is ISO 27001 & 27701 Compliance
             Certified. Person who may be contacted in case of any compliance{" "}
             <br /> related queries or grievances: Manoj Kumar <br />
@@ -238,7 +244,7 @@ const Footer = () => {
             variant="body1"
             color="textSecondary"
             align="left"
-            marginTop="10px"
+            marginTop="20px"
           >
             ** All product names, logos, and brands are property of their
             respective owners. All company, product and service names used in
@@ -259,9 +265,14 @@ const Footer = () => {
             <img
               src={safeguardImage}
               alt="Safeguard by DeviceSafety.org"
-              style={{ width: "400px", marginLeft: "100px" }}
+              style={{
+                width: "400px",
+                marginLeft: "100px",
+                marginBottom: "100px",
+              }}
             />
           </Box>
+          <hr />
           <Typography
             variant="body1"
             color="textSecondary"
