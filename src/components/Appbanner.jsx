@@ -6,7 +6,7 @@ import AppImage from "../assets/appbaner.jpg";
 
 function DownloadAppBanner() {
   return (
-    <Box sx={{ marginTop: 10 }}>
+    <Box sx={{ marginTop: 10, display: "flex", flexWrap: "wrap" }}>
       <Box
         sx={{
           backgroundColor: "#34C2C6",

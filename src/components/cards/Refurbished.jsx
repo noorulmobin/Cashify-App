@@ -89,6 +89,7 @@ const ProductCard = ({ product }) => {
         border: `1px solid ${red[500]}`,
         borderRadius: 2,
         margin: "0 auto",
+        position: "relative", // To ensure the "Stock Out Soon" label positions correctly
       }}
     >
       <CardMedia

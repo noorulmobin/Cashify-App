@@ -3,7 +3,7 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import { Button, CardActionArea, CardActions } from "@mui/material";
+import { CardActionArea } from "@mui/material";
 import myLocalimage8 from "../../assets/sellphones.jpg";
 import myLocalimage16 from "../../assets/selllaptops.jpg";
 import myLocalimage17 from "../../assets/selltv.jpg";
@@ -26,8 +26,14 @@ export default function MultiActionAreaCard() {
             maxWidth: 1450,
             margin: "auto",
             display: "flex",
-
             gap: 10,
+            flexWrap: {
+              xs: "wrap", // Applies wrapping on extra small screens
+              sm: "wrap", // Applies wrapping on small screens
+              md: "nowrap", // No wrapping on medium screens and above
+              lg: "nowrap", // No wrapping on large screens and above
+              xl: "nowrap", // No wrapping on extra large screens and above
+            },
           }}
         >
           <CardActionArea>

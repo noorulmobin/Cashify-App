@@ -152,9 +152,26 @@ const OutlinedCard = () => {
             View all stores
           </Typography>
         </Box>
-        <Box sx={{ display: "flex", justifyContent: "left", mb: 12, ml: 32 }}>
-          <Box sx={{ display: "flex", alignItems: "left", gap: 2 }}>
-            <Box sx={{ display: "flex", alignItems: "center" }}>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "left",
+            mb: 12,
+            ml: 32,
+            flexWrap: "wrap",
+          }}
+        >
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: "left",
+              gap: 2,
+              flexWrap: "wrap",
+            }}
+          >
+            <Box
+              sx={{ display: "flex", alignItems: "center", flexWrap: "wrap" }}
+            >
               <LocationOnIcon sx={{ color: "teal" }} />
               <Typography variant="subtitle1" sx={{ ml: 1 }}>
                 200+ Experience Centres
@@ -185,6 +202,8 @@ const OutlinedCard = () => {
               alignItems: "flex-start",
               ml: 2,
               padding: "30px",
+              flexWrap: "wrap",
+              display: "flex",
             }}
           >
             <TextField

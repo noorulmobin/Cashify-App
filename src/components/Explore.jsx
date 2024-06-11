@@ -109,7 +109,16 @@ const Explore = () => {
 
       <Slider {...settings}>
         {products.map((product) => (
-          <Card key={product.id} sx={{ maxWidth: 345, margin: "auto" }}>
+          <Card
+            key={product.id}
+            sx={{
+              maxWidth: 345,
+              margin: "auto",
+              display: "flex",
+              alignItems: "center",
+              flexWrap: "wrap",
+            }}
+          >
             <CardMedia
               component="img"
               height="340"
@@ -120,7 +129,7 @@ const Explore = () => {
               <Typography variant="h6" component="div">
                 {product.title}
               </Typography>
-              <Box display="flex" alignItems="center">
+              <Box display="flex" alignItems="center" flexWrap="wrap">
                 <Rating
                   name="read-only"
                   value={product.rating}

@@ -187,6 +187,8 @@ const PrimarySearchAppBar = () => {
             maxWidth: 1450,
             margin: "auto",
             gap: "111px",
+            display: "flex",
+            flexWrap: "wrap",
           }}
         >
           <Typography sx={{ color: "black" }}>All</Typography>
