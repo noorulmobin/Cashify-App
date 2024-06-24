@@ -13,7 +13,7 @@ const Hotdeals = () => {
   return (
     <Box
       sx={{
-        background: "#f3f4f7",
+        background: "linear-gradient(180deg,#f3f4f7,#f3f4f7)",
         height: "350px",
       }}
     >

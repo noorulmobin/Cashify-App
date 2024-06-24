@@ -15,6 +15,8 @@ import NotificationsIcon from "@mui/icons-material/Notifications";
 import Button from "@mui/material/Button";
 import HeaderLogo from "../assets/headerlogo.png";
 import Menu from "@mui/material/Menu";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
+import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -164,6 +166,20 @@ const PrimarySearchAppBar = () => {
                 id="searchInput"
               />
             </Search>
+
+            <Box sx={{ display: "flex", alignItems: "center", paddingLeft: 2 }}>
+              <LocationOnIcon sx={{ color: "black" }} />
+              <Box sx={{ display: "flex", alignItems: "center" }}>
+                <Typography
+                  variant="h5"
+                  sx={{ color: "black", paddingLeft: 1 }}
+                >
+                  Gurgoun
+                </Typography>
+                <ArrowDropDownIcon sx={{ color: "black" }} />
+              </Box>
+            </Box>
+
             <Button
               variant="contained"
               sx={{ marginLeft: "auto", backgroundColor: "rgb(66, 200, 183)" }}
@@ -186,33 +202,29 @@ const PrimarySearchAppBar = () => {
           sx={{
             maxWidth: 1450,
             margin: "auto",
-            gap: "111px",
+            gap: "81px",
             display: "flex",
             flexWrap: "wrap",
           }}
         >
-          <Typography sx={{ color: "black" }}>All</Typography>
-          <Typography sx={{ marginLeft: "auto", color: "black" }}>
-            SellPhone
-          </Typography>
-          <Typography sx={{ marginLeft: "auto", color: "black" }}>
-            SellGadgets
-          </Typography>
-          <Typography sx={{ marginLeft: "auto", color: "black" }}>
-            BuyPhone
-          </Typography>
-          <Typography sx={{ marginLeft: "auto", color: "black" }}>
-            FindNewGadget
-          </Typography>
-          <Typography sx={{ marginLeft: "auto", color: "black" }}>
-            BuyLaptop
-          </Typography>
-          <Typography sx={{ marginLeft: "auto", color: "black" }}>
-            CashifyStore
-          </Typography>
-          <Typography sx={{ marginLeft: "auto", color: "black" }}>
-            More
-          </Typography>
+          {[
+            "All",
+            "SellPhone",
+            "SellGadgets",
+            "BuyPhone",
+            "FindNewGadget",
+            "BuyLaptop",
+            "CashifyStore",
+            "More",
+          ].map((text) => (
+            <Box
+              key={text}
+              sx={{ display: "flex", alignItems: "center", marginLeft: "auto" }}
+            >
+              <Typography sx={{ color: "black" }}>{text}</Typography>
+              <ArrowDropDownIcon sx={{ color: "black" }} />
+            </Box>
+          ))}
         </Toolbar>
       </AppBar>
       {renderMobileMenu}
@@ -220,4 +232,5 @@ const PrimarySearchAppBar = () => {
     </>
   );
 };
+
 export default PrimarySearchAppBar;

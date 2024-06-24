@@ -189,7 +189,7 @@ const OutlinedCard = () => {
           sx={{
             maxWidth: 1400,
             margin: "auto",
-            background: "lightGrey",
+            background: "rgb(247,247,247)",
             height: "300px",
             border: "none",
           }}

@@ -10,12 +10,14 @@ import myLocalImage33 from "../assets/vivo1.png";
 import myLocalImage34 from "../assets/paytm1.png";
 
 const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#e5e7eb",
+  backgroundColor:
+    theme.palette.mode === "dark" ? "#1A2027" : "rgb(66, 200, 183)",
   ...theme.typography.body2,
   padding: theme.spacing(1),
   textAlign: "center",
   color: theme.palette.text.secondary,
   overflow: "hidden",
+  border: "none",
 }));
 
 const marqueeAnimation = keyframes`
