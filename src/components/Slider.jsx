@@ -18,6 +18,7 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
   overflow: "hidden",
   border: "none",
+  flexWrap: "wrap",
 }));
 
 const marqueeAnimation = keyframes`

@@ -1,5 +1,12 @@
 import React from "react";
-import { Card, CardContent, CardMedia, Typography, Box } from "@mui/material";
+import {
+  Card,
+  CardContent,
+  CardMedia,
+  Typography,
+  Box,
+  Container,
+} from "@mui/material";
 import { Rating } from "@mui/material";
 import { red } from "@mui/material/colors";
 import Slider from "react-slick";
@@ -83,92 +90,94 @@ const ProductCard = ({ product }) => {
   );
 
   return (
-    <Card
-      sx={{
-        maxWidth: 345,
-        border: `1px solid ${red[500]}`,
-        borderRadius: 2,
-        margin: "0 auto",
-        position: "relative", // To ensure the "Stock Out Soon" label positions correctly
-      }}
-    >
-      <CardMedia
-        component="img"
-        height="340"
-        image={product.image}
-        alt={product.title}
-      />
-      <Box
+    <Container>
+      <Card
         sx={{
-          position: "absolute",
-          top: 8,
-          left: 8,
-          bgcolor: red[500],
-          color: "white",
-          padding: "2px 8px",
-          borderRadius: 1,
-          fontSize: "0.75rem",
+          maxWidth: 345,
+          border: `1px solid ${red[500]}`,
+          borderRadius: 2,
+          margin: "0 auto",
+          position: "relative", // To ensure the "Stock Out Soon" label positions correctly
         }}
       >
-        Stock Out Soon
-      </Box>
+        <CardMedia
+          component="img"
+          height="340"
+          image={product.image}
+          alt={product.title}
+        />
+        <Box
+          sx={{
+            position: "absolute",
+            top: 8,
+            left: 8,
+            bgcolor: red[500],
+            color: "white",
+            padding: "2px 8px",
+            borderRadius: 1,
+            fontSize: "0.75rem",
+          }}
+        >
+          Stock Out Soon
+        </Box>
 
-      <CardContent>
-        <Typography gutterBottom variant="h6" component="div">
-          {product.title}
-        </Typography>
-        <Box display="flex" alignItems="center">
-          <Rating
-            name="read-only"
-            value={product.rating}
-            readOnly
-            precision={0.5}
-          />
+        <CardContent>
+          <Typography gutterBottom variant="h6" component="div">
+            {product.title}
+          </Typography>
+          <Box display="flex" alignItems="center">
+            <Rating
+              name="read-only"
+              value={product.rating}
+              readOnly
+              precision={0.5}
+            />
+            <Typography
+              variant="body2"
+              color="textSecondary"
+              sx={{ marginLeft: 1 }}
+            >
+              ({product.reviews})
+            </Typography>
+          </Box>
+          <Box
+            sx={{
+              bgcolor: red[100],
+              padding: "4px 8px",
+              borderRadius: 1,
+              my: 1,
+              display: "inline-block",
+            }}
+          >
+            <Typography variant="body2" color="error">
+              Ends in 50m 47s
+            </Typography>
+          </Box>
+          <Typography variant="body2" color="textSecondary">
+            Starting from
+          </Typography>
+          <Typography variant="h6" color="textPrimary">
+            ₹{product.monthlyPrice}/month
+          </Typography>
+          <Typography variant="h5" color="textPrimary">
+            -{discount}% ₹{product.price.toLocaleString()}
+          </Typography>
           <Typography
             variant="body2"
             color="textSecondary"
-            sx={{ marginLeft: 1 }}
+            sx={{ textDecoration: "line-through" }}
           >
-            ({product.reviews})
+            ₹{product.originalPrice.toLocaleString()}
           </Typography>
-        </Box>
-        <Box
-          sx={{
-            bgcolor: red[100],
-            padding: "4px 8px",
-            borderRadius: 1,
-            my: 1,
-            display: "inline-block",
-          }}
-        >
-          <Typography variant="body2" color="error">
-            Ends in 50m 47s
+          <Typography variant="body2" color="primary" sx={{ mt: 1 }}>
+            Get this for as low as ₹{product.price.toLocaleString()}
           </Typography>
-        </Box>
-        <Typography variant="body2" color="textSecondary">
-          Starting from
-        </Typography>
-        <Typography variant="h6" color="textPrimary">
-          ₹{product.monthlyPrice}/month
-        </Typography>
-        <Typography variant="h5" color="textPrimary">
-          -{discount}% ₹{product.price.toLocaleString()}
-        </Typography>
-        <Typography
-          variant="body2"
-          color="textSecondary"
-          sx={{ textDecoration: "line-through" }}
-        >
-          ₹{product.originalPrice.toLocaleString()}
-        </Typography>
-        <Typography variant="body2" color="primary" sx={{ mt: 1 }}>
-          Get this for as low as ₹{product.price.toLocaleString()}
-        </Typography>
-        <Typography variant="body2" color="textSecondary">
-          Free Delivery • COD Available
-        </Typography>
-      </CardContent>
-    </Card>
+          <Typography variant="body2" color="textSecondary">
+            Free Delivery • COD Available
+          </Typography>
+        </CardContent>
+      </Card>
+    </Container>
   );
 };
 
@@ -252,7 +261,9 @@ const ProductList = () => {
 
 const App = () => {
   return (
-    <Box sx={{ padding: 2, maxWidth: 1450, margin: "0 auto" }}>
+    <Box
+      sx={{ padding: 2, maxWidth: 1450, margin: "0 auto", flexWrap: "wrap" }}
+    >
       <Typography variant="h3" sx={{ padding: 2 }}>
         Buy Refurbished Phones
       </Typography>

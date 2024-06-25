@@ -13,7 +13,12 @@ const Articles = () => {
     <Box sx={{ background: "#f3f4f7" }}>
       <Typography
         variant="h4"
-        sx={{ maxWidth: 1400, margin: "auto", paddingTop: "2%" }}
+        sx={{
+          maxWidth: 1400,
+          margin: "auto",
+          paddingTop: "2%",
+          flexWrap: "wrap",
+        }}
       >
         Trending Articles
         <Card
@@ -21,8 +26,10 @@ const Articles = () => {
             maxWidth: 1400,
             margin: "auto",
             paddingTop: "8px",
+            gap: 3,
             display: "flex",
             justifyContent: "space-between",
+            flexWrap: "wrap",
           }}
         >
           <Card sx={{ maxWidth: 440 }}>

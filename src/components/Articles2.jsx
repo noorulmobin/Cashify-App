@@ -37,13 +37,14 @@ const articles = [
 
 function ArticleCard({ title, date, image }) {
   return (
-    <Box sx={{ maxWidth: 1400, background: "#f3f4f7" }}>
+    <Box sx={{ maxWidth: 1400, background: "#f3f4f7", flexWrap: "wrap" }}>
       <Card
         sx={{
           display: "flex",
           mb: 2,
           maxWidth: 600,
           margin: "auto",
+          flexWrap: "wrap",
           justifyContent: "center",
         }}
       >

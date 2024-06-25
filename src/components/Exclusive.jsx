@@ -56,6 +56,7 @@ const StoreCard = ({ store }) => (
       width: 350,
       display: "flex",
       marginRight: "20%",
+      flexWrap: "wrap",
     }}
   >
     <CardContent>
@@ -129,7 +130,7 @@ const OutlinedCard = () => {
   };
 
   return (
-    <Box sx={{ minWidth: 275, border: "none" }}>
+    <Box sx={{ minWidth: 275, border: "none", flexWrap: "wrap" }}>
       <Card variant="outlined">
         <Box
           sx={{
@@ -138,6 +139,7 @@ const OutlinedCard = () => {
             mx: "auto",
             p: 2,
             display: "flex",
+            flexWrap: "wrap",
             justifyContent: "space-between",
             alignItems: "center",
           }}
@@ -147,7 +149,7 @@ const OutlinedCard = () => {
           </Typography>
           <Typography
             variant="subtitle1"
-            sx={{ cursor: "pointer", color: "teal" }}
+            sx={{ cursor: "pointer", color: "teal", flexWrap: "wrap" }}
           >
             View all stores
           </Typography>
@@ -173,11 +175,13 @@ const OutlinedCard = () => {
               sx={{ display: "flex", alignItems: "center", flexWrap: "wrap" }}
             >
               <LocationOnIcon sx={{ color: "teal" }} />
-              <Typography variant="subtitle1" sx={{ ml: 1 }}>
+              <Typography variant="subtitle1" sx={{ ml: 1, flexWrap: "wrap" }}>
                 200+ Experience Centres
               </Typography>
             </Box>
-            <Box sx={{ display: "flex", alignItems: "center" }}>
+            <Box
+              sx={{ display: "flex", alignItems: "center", flexWrap: "wrap" }}
+            >
               <StarIcon sx={{ color: "teal" }} />
               <Typography variant="subtitle1" sx={{ ml: 1 }}>
                 4.5+ Star Ratings
@@ -192,6 +196,7 @@ const OutlinedCard = () => {
             background: "rgb(247,247,247)",
             height: "300px",
             border: "none",
+            flexWrap: "wrap",
           }}
         >
           <Box
@@ -213,6 +218,7 @@ const OutlinedCard = () => {
                 width: "300px",
                 boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)",
                 backgroundColor: "white",
+                flexWrap: "wrap",
               }}
               InputProps={{
                 endAdornment: (

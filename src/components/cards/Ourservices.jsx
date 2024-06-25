@@ -12,135 +12,156 @@ import myLocalimage12 from "../../assets/selllaptops.jpg";
 import myLocalimage13 from "../../assets/findnew.jpg";
 import myLocalimage14 from "../../assets/recycle.jpg";
 import myLocalimage15 from "../../assets/smatwatches.jpg";
+import Box from "@mui/material/Box";
 
 export default function MultiActionAreaCard() {
   return (
     <>
       <div id="ourservices">
-        <Typography variant="h3" sx={{ maxWidth: 1450, margin: "auto" }}>
+        <Typography
+          variant="h3"
+          sx={{ maxWidth: 1450, margin: "auto", flexWrap: "wrap" }}
+        >
           Our Services
         </Typography>
 
-        <Card
+        <Box
           sx={{
             maxWidth: 1450,
             margin: "auto",
             display: "flex",
-            gap: 10,
+
+            gap: 5,
             flexWrap: {
-              xs: "wrap", // Applies wrapping on extra small screens
-              sm: "wrap", // Applies wrapping on small screens
-              md: "nowrap", // No wrapping on medium screens and above
-              lg: "nowrap", // No wrapping on large screens and above
-              xl: "nowrap", // No wrapping on extra large screens and above
+              xs: "wrap",
+              sm: "wrap",
+              md: "nowrap",
+              lg: "wrap",
+              xl: "nowrap",
             },
           }}
         >
-          <CardActionArea>
-            <CardMedia
-              component="img"
-              height="140"
-              image={myLocalimage8}
-              alt="Description of the image"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h6" component="div">
-                Sell Phones
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-          <CardActionArea>
-            <CardMedia
-              component="img"
-              height="140"
-              image={myLocalimage9}
-              alt="Description of the image"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h6" component="div">
-                Buy Phones
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-          <CardActionArea>
-            <CardMedia
-              component="img"
-              height="140"
-              image={myLocalimage10}
-              alt="Description of the image"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h6" component="div">
-                Repair Phones
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-          <CardActionArea>
-            <CardMedia
-              component="img"
-              height="140"
-              image={myLocalimage11}
-              alt="Description of the image"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h6" component="div">
-                Nearby Stores
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-          <CardActionArea>
-            <CardMedia
-              component="img"
-              height="140"
-              image={myLocalimage12}
-              alt="Description of the image"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h6" component="div">
-                Sell Laptops
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-          <CardActionArea>
-            <CardMedia
-              component="img"
-              height="140"
-              image={myLocalimage13}
-              alt="Description of the image"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h6" component="div">
-                New phones
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-          <CardActionArea>
-            <CardMedia
-              component="img"
-              height="140"
-              image={myLocalimage14}
-              alt="Description of the image"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h6" component="div">
-                Recycle
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-          <CardActionArea>
-            <CardMedia
-              component="img"
-              height="140"
-              image={myLocalimage15}
-              alt="Description of the image"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h6" component="div">
-                Smart watches
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-        </Card>
+          <card>
+            <CardActionArea>
+              <CardMedia
+                component="img"
+                height="140"
+                image={myLocalimage8}
+                alt="Description of the image"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div">
+                  Sell Phones
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+          </card>
+          <card>
+            <CardActionArea>
+              <CardMedia
+                component="img"
+                height="140"
+                image={myLocalimage9}
+                alt="Description of the image"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div">
+                  Buy Phones
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+          </card>
+          <card>
+            <CardActionArea>
+              <CardMedia
+                component="img"
+                height="140"
+                image={myLocalimage10}
+                alt="Description of the image"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div">
+                  Repair Phones
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+          </card>
+          <card>
+            <CardActionArea>
+              <CardMedia
+                component="img"
+                height="140"
+                image={myLocalimage11}
+                alt="Description of the image"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div">
+                  Nearby Stores
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+          </card>
+          <card>
+            <CardActionArea>
+              <CardMedia
+                component="img"
+                height="140"
+                image={myLocalimage12}
+                alt="Description of the image"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div">
+                  Sell Laptops
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+          </card>
+          <card>
+            <CardActionArea>
+              <CardMedia
+                component="img"
+                height="140"
+                image={myLocalimage13}
+                alt="Description of the image"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div">
+                  New phones
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+          </card>
+          <card>
+            <CardActionArea>
+              <CardMedia
+                component="img"
+                height="140"
+                image={myLocalimage14}
+                alt="Description of the image"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div">
+                  Recycle
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+          </card>
+          <card>
+            <CardActionArea>
+              <CardMedia
+                component="img"
+                height="140"
+                image={myLocalimage15}
+                alt="Description of the image"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div">
+                  Smart watches
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+          </card>
+        </Box>
       </div>
     </>
   );

@@ -15,12 +15,24 @@ function Reviews() {
         background: "black",
         marginTop: "180px",
         height: "55vh",
+        flexWrap: "wrap",
       }}
     >
       <Container>
-        <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "space-between",
+            flexWrap: "wrap",
+          }}
+        >
           <Typography
-            sx={{ color: "white", fontWeight: "bold", paddingTop: "40px" }}
+            sx={{
+              color: "white",
+              fontWeight: "bold",
+              paddingTop: "40px",
+              flexWrap: "wrap",
+            }}
             variant="h4"
           >
             Trusted by 111.61 Lac + Happy Users and Major <br />
@@ -32,6 +44,7 @@ function Reviews() {
               alignItems: "flex-end",
               gap: "20px",
               marginTop: "50px",
+              flexWrap: "wrap",
             }}
           >
             <Card
@@ -40,6 +53,7 @@ function Reviews() {
                 padding: "10px",
                 height: "100px",
                 background: "linear-gradient(to bottom, Grey, black)",
+                flexWrap: "wrap",
               }}
             >
               <CurrencyRupeeIcon
@@ -49,6 +63,7 @@ function Reviews() {
                   border: "3px solid white",
                   borderRadius: "20px",
                   padding: "2px",
+                  flexWrap: "wrap",
                 }}
               />
               <Typography
@@ -70,6 +85,7 @@ function Reviews() {
                 padding: "10px",
                 height: "100px",
                 background: "linear-gradient(to bottom, grey, black)",
+                flexWrap: "wrap",
               }}
             >
               <PhoneIphoneIcon
@@ -100,9 +116,10 @@ function Reviews() {
             maxWidth: 1200,
             marginTop: 8,
             height: "230px",
+            flexWrap: "wrap",
           }}
         >
-          <Card sx={{ width: "350px", padding: "10px" }}>
+          <Card sx={{ width: "350px", padding: "10px", flexWrap: "wrap" }}>
             <FormatQuoteIcon
               sx={{ fontSize: "50px", color: "rgb(66, 200, 183)" }}
             />
@@ -115,7 +132,7 @@ function Reviews() {
             <Avatar alt="Cindy Baker" src={Mubeen} />
             <Typography>Gilgit Baltistan</Typography>
           </Card>
-          <Card sx={{ width: "350px", padding: "10px" }}>
+          <Card sx={{ width: "350px", padding: "10px", flexWrap: "wrap" }}>
             <FormatQuoteIcon
               sx={{ fontSize: "50px", color: "rgb(66, 200, 183)" }}
             />

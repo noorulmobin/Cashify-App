@@ -66,6 +66,7 @@ function SwipeableTextMobileStepper() {
           height: 50,
           pl: 2,
           bgcolor: "background.default",
+          flexWrap: "wrap",
         }}
       >
         <Typography>{images[activeStep].label}</Typography>

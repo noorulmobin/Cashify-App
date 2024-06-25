@@ -8,7 +8,14 @@ import myLocalImage27 from "../assets/banner.png"; // Adjusted path
 
 export default function MultiActionAreaCard() {
   return (
-    <Card sx={{ maxWidth: 1400, margin: "auto", paddingTop: "5px " }}>
+    <Card
+      sx={{
+        maxWidth: 1400,
+        margin: "auto",
+        paddingTop: "5px ",
+        flexWrap: "wrap",
+      }}
+    >
       <CardActionArea>
         <CardMedia
           component="img"

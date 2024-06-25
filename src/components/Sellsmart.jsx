@@ -23,6 +23,7 @@ const Sellsmart = () => {
           paddingTop: "8px",
           display: "flex",
           justifyContent: "space-between",
+          flexWrap: "wrap",
         }}
       >
         <Card sx={{ maxWidth: 340 }}>

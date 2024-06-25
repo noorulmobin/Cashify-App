@@ -13,7 +13,11 @@ export default function ActionAreaCard() {
   return (
     <Typography
       variant="h4"
-      sx={{ maxWidth: 1400, margin: "auto", paddingTop: "2%" }}
+      sx={{
+        maxWidth: 1400,
+        margin: "auto",
+        paddingTop: "2%",
+      }}
     >
       Better For Pocket. Buy Refurbished
       <Card
@@ -23,6 +27,7 @@ export default function ActionAreaCard() {
           paddingTop: "8px",
           display: "flex",
           justifyContent: "space-between",
+          flexWrap: "wrap",
         }}
       >
         <Card sx={{ maxWidth: 340 }}>

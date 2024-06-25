@@ -151,6 +151,7 @@ const PrimarySearchAppBar = () => {
           sx={{
             maxWidth: 1450,
             margin: "auto",
+            flexWrap: "wrap",
           }}
         >
           <Toolbar>

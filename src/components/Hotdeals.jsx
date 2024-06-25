@@ -28,8 +28,10 @@ const Hotdeals = () => {
             maxWidth: 1400,
             margin: "auto",
             paddingTop: "8px",
+            gap: 1,
             display: "flex",
             justifyContent: "space-between",
+            flexWrap: "wrap",
           }}
         >
           <Card sx={{ maxWidth: 340 }}>

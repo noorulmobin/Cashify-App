@@ -11,7 +11,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import myLocalImage23 from "../assets/iphone7.jpg";
-import myLocalImage24 from "../assets/iphoneX.jpg"; // Fix the image name if it's incorrect
+import myLocalImage24 from "../assets/iphoneX.jpg";
 import myLocalImage25 from "../assets/Iphone11.jpg";
 import myLocalImage26 from "../assets/iphone12.jpg";
 import myLocalImage27 from "../assets/iphone13.jpg";
@@ -87,8 +87,6 @@ const Explore = () => {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
-          infinite: true,
-          dots: true,
         },
       },
       {
@@ -115,13 +113,13 @@ const Explore = () => {
               maxWidth: 345,
               margin: "auto",
               display: "flex",
-              alignItems: "center",
+              flexDirection: "column",
               flexWrap: "wrap",
             }}
           >
             <CardMedia
               component="img"
-              height="340"
+              height="200"
               image={product.image}
               alt={product.title}
             />
@@ -129,7 +127,7 @@ const Explore = () => {
               <Typography variant="h6" component="div">
                 {product.title}
               </Typography>
-              <Box display="flex" alignItems="center" flexWrap="wrap">
+              <Box display="flex" alignItems="center">
                 <Rating
                   name="read-only"
                   value={product.rating}

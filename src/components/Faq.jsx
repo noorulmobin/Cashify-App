@@ -18,7 +18,15 @@ function FAQ() {
   };
 
   return (
-    <div style={{ maxWidth: 1400, margin: "auto", marginTop: "50px" }}>
+    <div
+      style={{
+        maxWidth: 1400,
+        margin: "auto",
+        marginTop: "50px",
+        display: "flex",
+        flexWrap: "wrap",
+      }}
+    >
       <Typography variant="h4" gutterBottom>
         Frequently Asked Questions
       </Typography>

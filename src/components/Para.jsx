@@ -8,6 +8,7 @@ const Para = () => {
         maxWidth: 1400,
         margin: "auto",
         marginTop: "15px",
+        flexWrap: "wrap",
       }}
     >
       <Typography variant="h4" sx={{ color: "rgb(123, 123, 123)" }}>
