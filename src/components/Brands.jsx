@@ -119,7 +119,7 @@ function Reviews() {
             flexWrap: "wrap",
           }}
         >
-          <Card sx={{ width: "350px", padding: "10px", flexWrap: "wrap" }}>
+          <Card sx={{ width: "351px", padding: "10px", flexWrap: "wrap" }}>
             <FormatQuoteIcon
               sx={{ fontSize: "50px", color: "rgb(66, 200, 183)" }}
             />
