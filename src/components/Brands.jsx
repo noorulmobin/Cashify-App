@@ -138,7 +138,7 @@ function Reviews() {
             />
             <Typography>
               Sold off my phone very easily and got the <br />
-              payment on the spot. Best experience so <br />
+              payment on the spot. Best experience so for a <br />
               far.
             </Typography>
             <Avatar alt="Cindy Baker" src={Mubeen} />
