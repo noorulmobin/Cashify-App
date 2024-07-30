@@ -16,7 +16,7 @@ export default function ActionAreaCard() {
       sx={{
         maxWidth: 1400,
         margin: "auto",
-        paddingTop: "2%",
+        padding: "1%",
       }}
     >
       Better For Pocket. Buy Refurbished

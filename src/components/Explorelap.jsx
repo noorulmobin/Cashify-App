@@ -97,7 +97,15 @@ const Explores = () => {
   };
 
   return (
-    <Box sx={{ maxWidth: 1450, margin: "auto", border: "none" ,flexWrap:"wrap"}}>
+    <Box
+      sx={{
+        maxWidth: 1450,
+        margin: "auto",
+        border: "none",
+        flexWrap: "wrap",
+        padding: "5px",
+      }}
+    >
       <Typography variant="h3" align="left" gutterBottom>
         Explore Refurbished Laptops
       </Typography>

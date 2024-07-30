@@ -100,7 +100,9 @@ const Explore = () => {
   };
 
   return (
-    <Box sx={{ maxWidth: 1450, margin: "auto", border: "none" }}>
+    <Box
+      sx={{ maxWidth: 1450, margin: "auto", border: "none", padding: "5px" }}
+    >
       <Typography variant="h3" align="left" gutterBottom>
         Explore Refurbished Mobiles
       </Typography>

@@ -32,11 +32,11 @@ export default function MultiActionAreaCard() {
             display: "flex",
             gap: 5,
             flexWrap: {
-              xs: "wrap", // Applies wrapping on extra small screens
-              sm: "wrap", // Applies wrapping on small screens
-              md: "nowrap", // No wrapping on medium screens and above
-              lg: "nowrap", // No wrapping on large screens and above
-              xl: "nowrap", // No wrapping on extra large screens and above
+              xs: "wrap",
+              sm: "wrap",
+              md: "nowrap",
+              lg: "nowrap",
+              xl: "nowrap",
             },
           }}
         >

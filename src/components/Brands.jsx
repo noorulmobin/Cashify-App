@@ -13,8 +13,8 @@ function Reviews() {
       sx={{
         maxWidth: "fix-content",
         background: "black",
-        marginTop: "180px",
-        height: "55vh",
+        marginTop: "280px",
+        height: "75vh",
         flexWrap: "wrap",
       }}
     >
@@ -30,7 +30,8 @@ function Reviews() {
             sx={{
               color: "white",
               fontWeight: "bold",
-              paddingTop: "40px",
+              paddingTop: "80px",
+
               flexWrap: "wrap",
             }}
             variant="h4"
@@ -42,7 +43,7 @@ function Reviews() {
             sx={{
               display: "flex",
               alignItems: "flex-end",
-              gap: "20px",
+              gap: "30px",
               marginTop: "50px",
               flexWrap: "wrap",
             }}
@@ -115,11 +116,18 @@ function Reviews() {
             justifyContent: "space-between",
             maxWidth: 1200,
             marginTop: 8,
-            height: "230px",
+            // height: "230px",
             flexWrap: "wrap",
           }}
         >
-          <Card sx={{ width: "351px", padding: "10px", flexWrap: "wrap" }}>
+          <Card
+            sx={{
+              width: "30%",
+              padding: "10px",
+              flexWrap: "wrap",
+              display: "flex",
+            }}
+          >
             <FormatQuoteIcon
               sx={{ fontSize: "50px", color: "rgb(66, 200, 183)" }}
             />
@@ -132,7 +140,14 @@ function Reviews() {
             <Avatar alt="Cindy Baker" src={Mubeen} />
             <Typography>Gilgit Baltistan</Typography>
           </Card>
-          <Card sx={{ width: "350px", padding: "10px", flexWrap: "wrap" }}>
+          <Card
+            sx={{
+              width: "30%",
+              padding: "10px",
+              flexWrap: "wrap",
+              display: "flex",
+            }}
+          >
             <FormatQuoteIcon
               sx={{ fontSize: "50px", color: "rgb(66, 200, 183)" }}
             />
@@ -144,7 +159,14 @@ function Reviews() {
             <Avatar alt="Cindy Baker" src={Mubeen} />
             <Typography>Gilgit Baltistan</Typography>
           </Card>
-          <Card sx={{ width: "350px", padding: "10px" }}>
+          <Card
+            sx={{
+              width: "30%",
+              padding: "10px",
+              flexWrap: "wrap",
+              display: "flex",
+            }}
+          >
             <FormatQuoteIcon
               sx={{ fontSize: "50px", color: "rgb(66, 200, 183)" }}
             />

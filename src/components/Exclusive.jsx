@@ -38,13 +38,13 @@ const stores = [
     timings: "10:00 AM - 09:00 PM",
     pincode: "122001",
   },
-  {
-    location: "GURGAON",
-    name: "Cashify Buy, Sell and Repair Mobile Store MG Road Gurgaon",
-    address: "MG Road Metro, Exit Gate no 2, M.G. Road, Gurgaon",
-    timings: "09:00 AM - 09:00 PM",
-    pincode: "122001",
-  },
+  // {
+  //   location: "GURGAON",
+  //   name: "Cashify Buy, Sell and Repair Mobile Store MG Road Gurgaon",
+  //   address: "MG Road Metro, Exit Gate no 2, M.G. Road, Gurgaon",
+  //   timings: "09:00 AM - 09:00 PM",
+  //   pincode: "122001",
+  // },
 ];
 
 const StoreCard = ({ store }) => (
@@ -57,6 +57,7 @@ const StoreCard = ({ store }) => (
       display: "flex",
       marginRight: "20%",
       flexWrap: "wrap",
+      overflow: "hidden",
     }}
   >
     <CardContent>
